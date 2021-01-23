@@ -1,0 +1,32 @@
+<!--
+    Author: - Shubham Nikam
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Canvas Drawing 3</title>
+        <style>
+            body{
+                background-color: grey;
+            }
+            #my_canvas{
+                background-color: white;
+            }
+        </style>
+        <script>
+            window.onload = function(){
+                var context = document.getElementById("my_canvas").getContext('2d');
+                context.beginPath();
+                var radians = (Math.PI)/180 * 360;
+                context.arc(300,200,100,0,radians,false);
+                context.fill();
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Canvas Drawing Lesson 3</h1>
+        <canvas id="my_canvas" width="900px" height="700px">
+            Your Browser does not support the Canvas feature
+        </canvas>
+    </body>
+</html>
