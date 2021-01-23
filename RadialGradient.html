@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Canvas Drawing 2</title>
+        <style>
+            body{
+                background-color: grey;
+            }
+            #my_canvas{
+                background-color: white;
+            }
+        </style>
+        <script>
+            window.onload = function(){
+                var context = document.getElementById("my_canvas").getContext('2d');
+                context.rect(0,0,800,900)
+                var radialGrad = context.createRadialGradient(200,200,50,200,200,150);
+                radialGrad.addColorStop(0,"red");
+                radialGrad.addColorStop(0.3, "yellow");
+                radialGrad.addColorStop(0.7, "green");
+                radialGrad.addColorStop(1, "white");
+                context.fillStyle = radialGrad;
+                context.fill();
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Canvas Drawing Lesson 2</h1>
+        <canvas id="my_canvas" width="900px" height="700px">
+            Your Browser does not support the Canvas feature
+        </canvas>
+    </body>
+</html>
