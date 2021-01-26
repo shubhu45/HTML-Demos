@@ -1,0 +1,36 @@
+<!--
+    Author: - Shubham Nikam
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Canvas Drawing 5</title>
+        <style>
+            body{
+                background-color: grey;
+            }
+            #my_canvas{
+                background-color: white;
+            }
+        </style>
+        <script>
+            window.onload = function(){
+                var context = document.getElementById("my_canvas").getContext('2d');
+                context.beginPath();
+                var grad = context.createLinearGradient(0,0,0,200);
+                grad.addColorStop(0, "blue");
+                grad.addColorStop(.5, "yellow");
+                grad.addColorStop(1, "green");
+                context.fillStyle = grad;
+                context.font = "50px calibri"
+                context.fillText("Magic", 140,140)
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Canvas Drawing Lesson 5</h1>
+        <canvas id="my_canvas" width="900px" height="700px">
+            Your Browser does not support the Canvas feature
+        </canvas>
+    </body>
+</html>

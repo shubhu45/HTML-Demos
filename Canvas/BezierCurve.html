@@ -1,0 +1,32 @@
+<!--
+    Author: - Shubham Nikam
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Canvas Drawing 4</title>
+        <style>
+            body{
+                background-color: grey;
+            }
+            #my_canvas{
+                background-color: white;
+            }
+        </style>
+        <script>
+            window.onload = function(){
+                var context = document.getElementById("my_canvas").getContext('2d');
+                context.beginPath();
+                context.moveTo(188,30);
+                context.bezierCurveTo(140,10,388,10,388,170);
+                context.stroke();
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Canvas Drawing Lesson 4</h1>
+        <canvas id="my_canvas" width="900px" height="700px">
+            Your Browser does not support the Canvas feature
+        </canvas>
+    </body>
+</html>
