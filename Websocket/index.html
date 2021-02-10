@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Websocket Client</title>
+    </head>
+    <body>
+        <h1>Websocket Example</h1>
+    </body>
+    <script>
+        const ws = new WebSocket("ws://localhost:8083")
+
+        ws.addEventListener('open', ()=>{
+            console.log("ohuuuun Connection with server is established 😊😍")
+        })
+    </script>
+</html>
